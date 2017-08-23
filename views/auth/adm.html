@@ -1,0 +1,49 @@
+<div class="animated fadeIn">
+    <div class="animated fadeIn">
+    <header class="imagem-adm">
+        <div class="cabecalho">
+
+        </div>
+    </header>
+    <div class="container">
+        <div class="row" style="padding-top: 40px;">
+            <div class="col-xs-8">
+            <h2>Lista de notícias</h2>
+            </div>
+            <div class="col-xs-4">
+                <button type="button" class="btn btn-primary" style="margin-top: 30px;" ng-click="adicionaNoticia()">Nova notícia</button>
+            </div>
+        </div>
+        <p>Selecione a notícia que deseja alterar, excluir, ou inserir uma nova.</p>
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Titulo da notícia</th>
+                <th>Autor</th>
+                <th>Ação</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="noticia in noticias">
+                <td>{{noticia.titulo}}</td>
+                <td>{{noticia.autor}}</td>
+                <td>
+                    <button type="button" class="btn btn-danger"
+                        mwl-confirm
+                        title="Remover notícia"
+                        message="Deseja realmente remover essa notícia?"
+                        confirm-text="Sim"
+                        cancel-text="Cancelar"
+                        on-confirm="removerNoticia(noticia)"
+                        on-cancel=""
+                        confirm-button-type="danger"
+                        cancel-button-type="default">
+                        <i class="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                    <button type="button" class="btn btn-info" ng-click="atualizaNoticia(noticia)">Editar</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

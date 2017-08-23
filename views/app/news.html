@@ -1,0 +1,25 @@
+<div class="animated fadeIn"> 
+    
+        <header class="imagem-news">
+            <div class="cabecalho">
+
+            </div>
+        </header>
+<div class="container">
+        <header class="cabecalho-noticia">JORNAL EL BAGUETON</header>
+    <hr class="divisao-noticia"/>
+    <section class="sessao-noticia">
+    <div ng-repeat="noticia in noticias">
+        <h1 class="titulo-noticia">{{noticia.titulo}}</h1>
+        <img src="{{noticia.urlImagem}}" alt="imagem da notícia" class="imagem-noticia"/>
+        <p>{{noticia.conteudo}}</p>
+
+        
+    </div>
+    </section>
+    <footer>
+        <p>Atenção: Todas as notícias foram retiradas do site Sensacionalista e tem os seus devidos créditos.</p>
+    </footer>
+    </div>
+
+</div>
